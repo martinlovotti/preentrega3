@@ -1,0 +1,502 @@
+* {  
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+  color: rgb(185, 185, 185);
+}
+
+a {  
+  text-decoration: none;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;  
+  background: #111111;
+  min-height: 100vh;
+}
+
+/* Login */
+.logContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;   
+}
+
+.userContainer {
+  display: flex;
+  flex: 0 0 auto;
+  width: 50vw;
+  width: 1000px;    
+  margin: 0 auto;  
+  justify-content: space-between;
+  align-content: center;
+  height: 3rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 0.5rem 0.5rem 0.5rem 0;  
+}
+
+.userData {
+  display: flex;
+  flex-direction: column;   
+  align-items: flex-start;  
+}
+
+.userP {
+  display: inline;
+  color: white;  
+}
+
+.userContainer a {  
+  display: inline;   
+  font-size: 0.8rem;
+  font-weight: 500; 
+  border: solid 1px #7e7d7d; 
+  height: auto;
+  padding: 0.1rem 1rem;; 
+  text-align: center;
+  background-color: transparent;
+  border-radius: 0;
+  color: #bebebe;
+}
+
+.userImg {  
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  position: absolute;
+  top: 1rem;
+  left: calc(50% - 1.5rem);
+  right: auto;
+  border-radius: 50%;
+}
+
+.userContainer #cartContainer {
+  border: none;
+}
+
+.cartIcon {
+  object-fit: contain;
+  height: 2rem;
+  width: 2rem;
+  border: none;
+}
+
+#counter {
+  position: relative;
+  top: -1rem;
+  left: -1rem; 
+  height: 1.3rem;
+  width: 1.3rem; 
+  background-color: #7928CA;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Home Productos */
+
+#productsContainer, #productos {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.productContainer {
+  grid-column: auto / span 4;
+  box-shadow: 0 0 0 1px hsl(0deg 0% 100% / 15%);
+  padding: 0.5rem;
+}
+
+.productContainer .productImg img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.productContainer .productInfo h3 {
+  font-size: 1rem;
+  color: white;
+}
+
+.productContainer .productInfo {
+  text-align: left;
+}
+
+.productContainer .productInfo .info {
+  margin: 0.5rem 0;
+}
+
+.productContainer .productInfo div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.addBtn {
+  background-color: transparent;
+  border: none;
+  color: #6ee7b7;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.addBtn:hover {
+  transform: scale(1.1);
+}
+
+.dltBtn, .edtBtn {
+  background-color: transparent;  
+  border: none; 
+  border-radius: 5px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 100;  
+  width: 100%;
+  text-align: left;  
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+} 
+
+.edtBtn {
+  color: #0dd6b5;
+}
+
+.dltBtn {
+  color: #f81ce5;
+}
+
+
+/* Navigation Buttons */
+
+.lrBtn {  
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.lrBtn a{
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 500;
+  align-content: center;
+  align-self: center;  
+  height: auto;
+  padding: 0.5rem 1rem;; 
+  text-align: center;
+  background-color: transparent;  
+  color: white;
+  width: auto;
+
+  border: 1px solid transparent;
+  background-image: linear-gradient(#111111,#111111), linear-gradient(2.45024rad, #f81ce5 0,#7928ca 20%,#111111 90%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+/* Formulario */
+
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin-top: 2.5rem;
+  margin-bottom: 5rem;
+}
+
+.form legend {
+  font-size: 1.5rem;
+  margin: 0 auto 1rem;
+  color: white;
+}
+
+.form {
+  flex: 0 0 auto;
+  width: 50vw;
+  width: 1000px;  
+  margin-bottom: 1rem;  
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  font-size: 1.2rem;
+  font-weight: 100;  
+}
+
+.form label {
+  color: white; 
+}
+
+.form-group {
+  align-self: center;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  justify-content: center;
+  align-items: center; 
+  border-bottom: solid 1px #454444;  
+}
+
+.form input {
+  border: none;  
+  outline: none;
+  text-align: center;
+  background-color: transparent;
+  color: white; 
+  width: 50%;
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.form input::placeholder {  
+  color: #454444;
+}
+
+.form .form-button input {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;  
+  background-color: transparent;
+  cursor: pointer;
+  /* border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #6ee7b7, #9333ea) 1;  */
+
+  border: 1px solid transparent;
+  background-image: linear-gradient(#111111,#111111), linear-gradient(-2.45024rad, #6ee7b7 0,#0dd6b5 20%,#111111 90%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+
+  width: auto;  
+}
+
+/* Productos */
+.listadoProductos, .cardContainer {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50vw;
+  width: 1000px;
+  
+
+  margin: 1rem auto 5rem; 
+}
+
+.listadoProductos h2, .cardContainer h2 {
+  color: white;
+  font-weight: 500;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(90deg,#7928CA,#FF0080)
+}
+
+.borderVercel {
+  border: 1px solid transparent;
+  background-image: linear-gradient(#111111,#111111), linear-gradient(2.45024rad, #f81ce5 0,#7928ca 20%,#111111 80%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+
+/* CART */
+
+.cartContainer {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50vw;
+  width: 1000px;
+  margin: 5rem auto 5rem;
+  border: 1px solid transparent;
+  background-image: linear-gradient(#111111,#111111), linear-gradient(2.45024rad, #f81ce5 0,#7928ca 50%,#111111 90%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  /* box-shadow:0 0 60px rgba(255, 0, 255, 0.274);  */
+}
+
+.cartContainer h2 {
+  color: white;
+  font-weight: 500;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(90deg,#7928CA,#FF0080)
+}
+
+.cartContainer table{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;  
+  /* margin: 1rem auto; */  
+  border-spacing: 0px;
+}
+
+table .col {  
+  width: 25%;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+table, td {
+  border-top: 1px solid;
+}
+
+.productImage {
+  height: 1.5rem;
+  margin: 0.3rem auto;
+}
+
+.listTitle {  
+  font-size: 1.5rem;
+  font-weight: 100;  
+  text-align: center;   
+  margin: 0 auto; 
+  padding: 0.5rem;
+}
+
+
+
+.deleteBtn {
+  background-color: transparent;
+  border: none;
+  color: red;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.finishBuy {
+  margin: 3rem auto 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: #454444;
+  color: white;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.finishBuy:hover {
+  transform: scale(1.05);
+}
+
+/* Enlace */
+.anchor {  
+  display: flex;  
+  width: 50vw;
+  width: 1000px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.anchor a{ 
+  width: auto;
+  
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  color: white;
+
+  border: 1px solid transparent;
+  background-image: linear-gradient(#111111,#111111), linear-gradient(2.45024rad, #f81ce5 0,#7928ca 20%,#111111 90%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+
+/* Product Cards */
+#searchTab {
+  margin: 1rem 0;
+  text-align: center;
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 0.5rem;
+
+  border: none;
+  box-shadow: 0 0 0 1px hsl(0deg 0% 100% / 15%);
+
+ /*  border: 1px solid transparent;
+  background-image: linear-gradient(#111111,#111111), linear-gradient(2.45024rad, #f81ce5 0,#7928ca 20%,#111111 95%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box; */
+  transition: all 0.3s ease-in-out;
+}
+
+#searchTab:focus {  
+  background-color: rgba(255, 255, 255, 0.397);
+  outline: none; 
+}
+
+#searchTab:focus::placeholder{  
+  color: rgba(255, 255, 255, 0.61) ;
+}
+
+/* USUARIO */
+#infoUserContainer {
+  margin: 2rem auto;  
+  width: 20rem;   
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  background-image: linear-gradient(#111111,#111111), linear-gradient(2.45024rad, #f81ce5 0,#7928ca 20%,#111111 90%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow:0 0 60px rgba(255, 0, 255, 0.274);  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  padding: 1rem;
+  /* background radius gradient */
+  /* background-image:radial-gradient(circle, #ff00806e, transparent 60%) */
+}
+
+#infoUserContainer img {
+  margin: 1rem auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#infoUserContainer h3 {
+  margin: 1rem auto 2rem;  
+  color: white;  
+}
+
+#infoUserContainer a {
+  margin: 3rem auto 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: #454444;
+  color: white;
+  font-size: 0.8rem;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .form, .listadoProductos, .cartContainer, .cardContainer,  .anchor, .userContainer {
+    width: 90vw;
+  } 
+}
+
+@media screen and (max-width: 768px) { 
+  .productContainer {
+    grid-column: 1 / span 12 ;    
+  } 
+}
+
+
+
+
